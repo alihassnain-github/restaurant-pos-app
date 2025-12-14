@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.MuiChartsLegend-horizontal {
+    display: flex;
+    justify-content: center;
+}

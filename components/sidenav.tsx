@@ -1,5 +1,116 @@
-export default function SideNav() {
+"use client";
+
+import { styled, useTheme } from "@mui/material/styles";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import NavLinks from "./nav-links";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { Webhook } from "@mui/icons-material";
+import Link from "next/link";
+
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  padding: theme.spacing(0, 1),
+  ...theme.mixins.toolbar,
+  justifyContent: "space-between",
+}));
+
+interface SidebarProps {
+  open: boolean;
+  onClose: () => void;
+  drawerWidth: number;
+  isLargeScreen: boolean;
+}
+
+export default function SideNav({
+  open,
+  onClose,
+  drawerWidth,
+  isLargeScreen,
+}: SidebarProps) {
+  const theme = useTheme();
+
+  const drawerContent = (
+    <>
+      <DrawerHeader>
+        <Box></Box>
+        <Link
+          href={"/dashboard"}
+          style={{ display: "flex", alignItems: "center", gap: 5 }}
+        >
+          <Webhook color="primary" />
+          <Typography
+            variant="h5"
+            noWrap
+            component="h5"
+            sx={{ fontWeight: 400, letterSpacing: ".05rem" }}
+          >
+            VEND
+          </Typography>
+        </Link>
+        <IconButton onClick={onClose}>
+          {theme.direction === "ltr" ? (
+            <ChevronLeftIcon />
+          ) : (
+            <ChevronRightIcon />
+          )}
+        </IconButton>
+      </DrawerHeader>
+      <Divider />
+      <SimpleBar style={{ overflowY: "auto", height: "100%" }}>
+        <List>
+          <NavLinks />
+        </List>
+      </SimpleBar>
+    </>
+  );
+
+  // Large screens: persistent drawer (pushes content)
+  if (isLargeScreen) {
     return (
-        <h1>Hello WOrld</h1>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
+            width: drawerWidth,
+            boxSizing: "border-box",
+          },
+        }}
+        variant="persistent"
+        anchor="left"
+        open={open}
+      >
+        {drawerContent}
+      </Drawer>
     );
+  }
+
+  // Small/Medium screens: temporary drawer (overlay)
+  return (
+    <Drawer
+      variant="temporary"
+      open={open}
+      onClose={onClose}
+      ModalProps={{
+        keepMounted: true, // Better mobile performance
+      }}
+      sx={{
+        "& .MuiDrawer-paper": {
+          width: drawerWidth,
+          boxSizing: "border-box",
+        },
+      }}
+    >
+      {drawerContent}
+    </Drawer>
+  );
 }
