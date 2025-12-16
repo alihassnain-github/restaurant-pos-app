@@ -88,7 +88,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         isLargeScreen={isLargeScreen}
       />
 
-      <Main open={isLargeScreen && desktopOpen}>
+      <Main open={isLargeScreen && desktopOpen} sx={{ minHeight: "100dvh", width: "100%" }}>
         <DrawerHeader />
         {children}
       </Main>

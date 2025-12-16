@@ -5,12 +5,9 @@ import RecentOrders from "@/components/ui/dashboard/recent-orders";
 import RevenueChart from "@/components/ui/dashboard/revenue-chart";
 import TopSellingItems from "@/components/ui/dashboard/top-selling-items";
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
-import { BarChart } from "@mui/x-charts/BarChart";
 
 export default function Page() {
-
   return (
     <>
       <Typography variant="h5" component="h5" sx={{ mb: 2 }}>
@@ -56,7 +53,6 @@ export default function Page() {
           mb: 2,
         }}
       >
-
         <RecentOrders />
         <TopSellingItems />
       </Box>
