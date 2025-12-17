@@ -12,7 +12,7 @@ interface DashboardLayoutProps {
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <SidebarContextProvider>
-      <Box sx={{ display: "flex" }} component={Paper}>
+      <Box sx={{ display: "flex", width: "100%" }} component={Paper}>
         <Header />
 
         <SideNav />

@@ -1,3 +1,4 @@
+import OrdersTable from "@/components/ui/orders/table";
 import Typography from "@mui/material/Typography";
 
 export default function Page() {
@@ -6,6 +7,7 @@ export default function Page() {
       <Typography variant="h5" component="h5" sx={{ mb: 2 }}>
         Orders
       </Typography>
+      <OrdersTable />
     </>
   );
 }

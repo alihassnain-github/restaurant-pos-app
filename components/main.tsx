@@ -4,30 +4,29 @@ import { ReactNode } from "react";
 import { styled } from "@mui/material";
 import { drawerWidth, useSidebarProps } from "@/context/sidebar-provider";
 
-const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
+const Main = styled("main", {
+    shouldForwardProp: (prop) => prop !== "open",
+})<{
     open?: boolean;
-}>(({ theme }) => ({
+}>(({ theme, open }) => ({
+    minHeight: "100vh",
     flexGrow: 1,
     padding: theme.spacing(3),
-    transition: theme.transitions.create("margin", {
+    overflowX: "hidden",
+    transition: theme.transitions.create("width", {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
     }),
-    marginLeft: `-${drawerWidth}px`,
-    variants: [
-        {
-            props: ({ open }) => open,
-            style: {
-                transition: theme.transitions.create("margin", {
-                    easing: theme.transitions.easing.easeOut,
-                    duration: theme.transitions.duration.enteringScreen,
-                }),
-                marginLeft: 0,
-            },
-        },
-    ],
+    width: "100%",
+    ...(open && {
+        width: `calc(100% - ${drawerWidth}px)`,
+        transition: theme.transitions.create("width", {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+    }),
     [theme.breakpoints.down("lg")]: {
-        marginLeft: 0,
+        width: "100%",
     },
 }));
 
@@ -45,7 +44,6 @@ export default function MainWrapper({ children }: { children: ReactNode }) {
     return (
         <Main
             open={isLargeScreen && desktopOpen}
-            sx={{ minHeight: "100dvh", width: "100%" }}
         >
             <DrawerHeader />
             {children}
