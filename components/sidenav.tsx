@@ -14,6 +14,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Webhook } from "@mui/icons-material";
 import Link from "next/link";
+import { useSidebarProps, drawerWidth } from "@/context/sidebar-provider";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -23,19 +24,9 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "space-between",
 }));
 
-interface SidebarProps {
-  open: boolean;
-  onClose: () => void;
-  drawerWidth: number;
-  isLargeScreen: boolean;
-}
+export default function SideNav() {
+  const { handleDrawerClose, isLargeScreen, isDrawerOpen } = useSidebarProps();
 
-export default function SideNav({
-  open,
-  onClose,
-  drawerWidth,
-  isLargeScreen,
-}: SidebarProps) {
   const theme = useTheme();
 
   const drawerContent = (
@@ -56,7 +47,7 @@ export default function SideNav({
             VEND
           </Typography>
         </Link>
-        <IconButton onClick={onClose}>
+        <IconButton onClick={handleDrawerClose}>
           {theme.direction === "ltr" ? (
             <ChevronLeftIcon />
           ) : (
@@ -87,7 +78,7 @@ export default function SideNav({
         }}
         variant="persistent"
         anchor="left"
-        open={open}
+        open={isDrawerOpen}
       >
         {drawerContent}
       </Drawer>
@@ -98,8 +89,8 @@ export default function SideNav({
   return (
     <Drawer
       variant="temporary"
-      open={open}
-      onClose={onClose}
+      open={isDrawerOpen}
+      onClose={handleDrawerClose}
       ModalProps={{
         keepMounted: true, // Better mobile performance
       }}

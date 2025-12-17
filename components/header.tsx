@@ -12,6 +12,7 @@ import NotificationsMenu from "./notifications-menu";
 import ThemeToggle from "./theme";
 import Divider from "@mui/material/Divider";
 import ScreenToggle from "./toggle-screen";
+import { useSidebarProps, drawerWidth } from "@/context/sidebar-provider";
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -37,29 +38,21 @@ const AppBar = styled(MuiAppBar, {
   },
 }));
 
-interface TopbarProps {
-  open: boolean;
-  onMenuClick: () => void;
-  drawerWidth: number;
-}
+export default function Header() {
+  const { isDrawerOpen, handleDrawerToggle } = useSidebarProps();
 
-export default function Header({
-  open,
-  onMenuClick,
-  drawerWidth,
-}: TopbarProps) {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
 
   return (
-    <AppBar position="fixed" open={open} drawerwidth={drawerWidth}>
+    <AppBar position="fixed" open={isDrawerOpen} drawerwidth={drawerWidth}>
       <Toolbar>
         <IconButton
-          sx={[isLargeScreen && open && { display: "none" }]}
+          sx={[isLargeScreen && isDrawerOpen && { display: "none" }]}
           edge="start"
           color="inherit"
           aria-label="open drawer"
-          onClick={onMenuClick}
+          onClick={handleDrawerToggle}
         >
           <MenuIcon />
         </IconButton>

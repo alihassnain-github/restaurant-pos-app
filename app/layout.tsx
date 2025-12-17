@@ -2,6 +2,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import "./globals.css";
 import theme from "./theme";
 import { inter } from "./fonts";
+import { InitColorSchemeScript } from "@mui/material";
 
 export default function RootLayout({
   children,
@@ -9,9 +10,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <InitColorSchemeScript attribute="data" defaultMode="system" />
+        <ThemeProvider defaultMode="system" theme={theme}>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

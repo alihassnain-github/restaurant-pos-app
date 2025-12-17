@@ -4,6 +4,9 @@ import { createTheme } from "@mui/material/styles";
 import { inter, lusitana } from "./fonts";
 
 const theme = createTheme({
+  cssVariables: {
+    colorSchemeSelector: "data",
+  },
   colorSchemes: { light: true, dark: true },
   typography: {
     fontFamily: inter.style.fontFamily,

@@ -7,16 +7,13 @@ import { BedtimeOutlined, WbSunnyOutlined } from "@mui/icons-material";
 export default function ThemeToggle() {
   const { mode, setMode } = useColorScheme();
 
-  const handleToggle = () => {
-    if (mode === "light") {
-      setMode("dark");
-    } else {
-      setMode("light");
-    }
-  };
+  if (!mode) return null;
 
   return (
-    <IconButton onClick={handleToggle} color="inherit">
+    <IconButton
+      onClick={() => setMode(mode === "light" ? "dark" : "light")}
+      color="inherit"
+    >
       {mode === "light" ? <BedtimeOutlined /> : <WbSunnyOutlined />}
     </IconButton>
   );
