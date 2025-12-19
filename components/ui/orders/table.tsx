@@ -111,106 +111,15 @@ export const orders: Order[] = [
     createdAt: new Date("2025-12-18T09:20:00Z"),
     paymentMethod: "card",
   },
-  {
-    orderId: "1011",
-    tableNumber: 11,
-    totalItems: 4,
-    totalAmount: 1800,
-    status: "paid",
-    createdAt: new Date("2025-12-18T09:25:00Z"),
-    paymentMethod: "cash",
-  },
-  {
-    orderId: "1012",
-    tableNumber: 12,
-    totalItems: 6,
-    totalAmount: 2900,
-    status: "ready",
-    createdAt: new Date("2025-12-18T09:30:00Z"),
-    paymentMethod: "card",
-  },
-  {
-    orderId: "1013",
-    tableNumber: 13,
-    totalItems: 2,
-    totalAmount: 900,
-    status: "cancelled",
-    createdAt: new Date("2025-12-18T09:35:00Z"),
-    paymentMethod: "cash",
-  },
-  {
-    orderId: "1014",
-    tableNumber: 14,
-    totalItems: 9,
-    totalAmount: 5200,
-    status: "preparing",
-    createdAt: new Date("2025-12-18T09:40:00Z"),
-    paymentMethod: "card",
-  },
-  {
-    orderId: "1015",
-    tableNumber: 15,
-    totalItems: 3,
-    totalAmount: 1400,
-    status: "paid",
-    createdAt: new Date("2025-12-18T09:45:00Z"),
-    paymentMethod: "cash",
-  },
-  {
-    orderId: "1016",
-    tableNumber: 16,
-    totalItems: 5,
-    totalAmount: 2500,
-    status: "ready",
-    createdAt: new Date("2025-12-18T09:50:00Z"),
-    paymentMethod: "card",
-  },
-  {
-    orderId: "1017",
-    tableNumber: 17,
-    totalItems: 4,
-    totalAmount: 1900,
-    status: "pending",
-    createdAt: new Date("2025-12-18T09:55:00Z"),
-    paymentMethod: "cash",
-  },
-  {
-    orderId: "1018",
-    tableNumber: 18,
-    totalItems: 6,
-    totalAmount: 3100,
-    status: "paid",
-    createdAt: new Date("2025-12-18T10:00:00Z"),
-    paymentMethod: "card",
-  },
-  {
-    orderId: "1019",
-    tableNumber: 19,
-    totalItems: 2,
-    totalAmount: 950,
-    status: "ready",
-    createdAt: new Date("2025-12-18T10:05:00Z"),
-    paymentMethod: "cash",
-  },
-  {
-    orderId: "1020",
-    tableNumber: 20,
-    totalItems: 7,
-    totalAmount: 4300,
-    status: "paid",
-    createdAt: new Date("2025-12-18T10:10:00Z"),
-    paymentMethod: "card",
-  },
 ];
 
 export default function OrdersTable() {
   return (
     <TableContainer
-      sx={{ maxHeight: 440, scrollbarWidth: "thin" }}
       component={Paper}
     >
-      <Table stickyHeader sx={{ minWidth: 992 }} aria-label="orders table">
-        <TableHead sx={{ backgroundColor: "action.hover", textWrap: "nowrap" }}>
+      <Table stickyHeader aria-label="orders table" sx={{ textWrap: "nowrap" }}>
+        <TableHead sx={{ backgroundColor: "action.selected" }}>
           <TableRow>
             <TableCell>Order ID</TableCell>
             <TableCell align="right">Table Number</TableCell>

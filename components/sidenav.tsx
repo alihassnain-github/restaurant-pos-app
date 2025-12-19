@@ -69,8 +69,18 @@ export default function SideNav() {
     return (
       <Drawer
         sx={{
-          width: drawerWidth,
+          width: isDrawerOpen ? drawerWidth : 0,
           flexShrink: 0,
+          transition: theme.transitions.create("width", {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+          }),
+          ...(isDrawerOpen && {
+            transition: theme.transitions.create("width", {
+              easing: theme.transitions.easing.easeOut,
+              duration: theme.transitions.duration.enteringScreen,
+            }),
+          }),
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",

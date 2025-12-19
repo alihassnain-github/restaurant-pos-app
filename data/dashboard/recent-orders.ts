@@ -3,31 +3,31 @@ export const recentOrders = [
     orderId: "ORD-1025",
     tableNumber: 4,
     totalAmount: 2850,
-    status: "Paid",
+    status: "paid",
   },
   {
     orderId: "ORD-1024",
     tableNumber: 2,
     totalAmount: 1450,
-    status: "Preparing",
+    status: "preparing",
   },
   {
     orderId: "ORD-1023",
     tableNumber: 7,
     totalAmount: 3200,
-    status: "Paid",
+    status: "paid",
   },
   {
     orderId: "ORD-1022",
     tableNumber: 1,
     totalAmount: 980,
-    status: "Pending",
+    status: "pending",
   },
   {
     orderId: "ORD-1021",
     tableNumber: 5,
     totalAmount: 2100,
-    status: "Cancelled",
+    status: "cancelled",
   },
 ];
 

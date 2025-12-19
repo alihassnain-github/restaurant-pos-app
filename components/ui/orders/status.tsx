@@ -24,7 +24,7 @@ export default function SelectStatus() {
 
   return (
     <div>
-      <FormControl sx={{ width: 300 }}>
+      <FormControl fullWidth size="small">
         <InputLabel>Order Status</InputLabel>
         <Select
           multiple

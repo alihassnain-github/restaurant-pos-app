@@ -243,7 +243,7 @@ export default function OrderDetailsDrawer() {
               mt: 1,
               px: 1,
               pt: 1,
-              pb: 2,
+              pb: 1,
               overflowX: "auto",
               scrollbarWidth: "thin",
             }}

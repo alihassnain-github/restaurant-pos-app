@@ -3,6 +3,6 @@ import TextField from "@mui/material/TextField";
 
 export default function Search({ placeholder }: { placeholder: string }) {
   return (
-    <TextField variant="outlined" label="Search" placeholder={placeholder} />
+    <TextField fullWidth size="small" variant="outlined" label="Search" placeholder={placeholder} />
   );
 }

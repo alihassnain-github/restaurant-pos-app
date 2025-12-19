@@ -4,3 +4,26 @@
   display: flex;
   justify-content: center;
 }
+
+.rdp-root {
+  --rdp-accent-color: #1976D2 !important;
+  --rdp-accent-background-color: #f0f0f0 !important;
+}
+
+.rdp-caption_label {
+  font-size: medium !important;
+  font-weight: 500 !important;
+}
+
+.rdp-month_grid {
+  font-size: small !important;
+}
+
+.rdp-selected {
+  font-size: small !important;
+  font-weight: 500 !important;
+}
+
+.rdp-range_middle {
+  color: black !important;
+}
