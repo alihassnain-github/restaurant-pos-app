@@ -50,7 +50,9 @@ export default function ItemCard({
             sx={{
               position: "relative",
               width: "100%",
-              alignContent: "center",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
               height: 140,
               backgroundColor: "#f5f5f5",
             }}

@@ -209,7 +209,7 @@ export default function OrdersTable() {
       sx={{ maxHeight: 440, scrollbarWidth: "thin" }}
       component={Paper}
     >
-      <Table stickyHeader sx={{ minWidth: 900 }} aria-label="orders table">
+      <Table stickyHeader sx={{ minWidth: 992 }} aria-label="orders table">
         <TableHead sx={{ backgroundColor: "action.hover", textWrap: "nowrap" }}>
           <TableRow>
             <TableCell>Order ID</TableCell>

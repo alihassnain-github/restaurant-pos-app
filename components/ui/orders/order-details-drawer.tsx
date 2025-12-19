@@ -241,7 +241,9 @@ export default function OrderDetailsDrawer() {
               display: "flex",
               gap: 2,
               mt: 1,
-              p: 1,
+              px: 1,
+              pt: 1,
+              pb: 2,
               overflowX: "auto",
               scrollbarWidth: "thin",
             }}
@@ -256,7 +258,7 @@ export default function OrderDetailsDrawer() {
               />
             ))}
           </Box>
-          <Divider component="div" sx={{ my: 2 }} />
+          <Divider component="div" sx={{ mt: 1, mb: 2 }} />
           <Typography variant="h6" component="h6">
             Payment Details
           </Typography>
