@@ -34,7 +34,6 @@ export default function ItemCard({
           position: "relative",
           width: "100%",
           height: 140,
-          backgroundColor: "#f5f5f5",
         }}
       >
         {image ? (
@@ -48,13 +47,13 @@ export default function ItemCard({
         ) : (
           <Box
             sx={{
+              bgcolor: "action.selected",
               position: "relative",
               width: "100%",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               height: 140,
-              backgroundColor: "#f5f5f5",
             }}
           >
             <Typography

@@ -1,3 +1,5 @@
+"use client";
+
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -9,6 +11,10 @@ import { formatDate } from "@/app/lib/utils";
 import StatusChip from "@/components/status-chip";
 import PaymentMethodChip from "@/components/payment-chip";
 import OrderDetailsDrawer from "./order-details-drawer";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import { useState } from "react";
+import Tooltip from "@mui/material/Tooltip";
+import IconButton from "@mui/material/IconButton";
 
 type Order = {
   orderId: string;
@@ -114,62 +120,78 @@ export const orders: Order[] = [
 ];
 
 export default function OrdersTable() {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
-    <TableContainer
-      component={Paper}
-    >
-      <Table stickyHeader aria-label="orders table" sx={{ textWrap: "nowrap" }}>
-        <TableHead sx={{ backgroundColor: "action.selected" }}>
-          <TableRow>
-            <TableCell>Order ID</TableCell>
-            <TableCell align="right">Table Number</TableCell>
-            <TableCell align="right">Total Items</TableCell>
-            <TableCell align="right">Total Amount</TableCell>
-            <TableCell>Order Status</TableCell>
-            <TableCell>Created At</TableCell>
-            <TableCell>Payment Method</TableCell>
-            <TableCell>Actions</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {orders.map(
-            ({
-              orderId,
-              tableNumber,
-              totalItems,
-              totalAmount,
-              status,
-              paymentMethod,
-              createdAt,
-            }) => (
-              <TableRow
-                hover
-                key={orderId}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {orderId}
-                </TableCell>
-                <TableCell align="right">{tableNumber}</TableCell>
-                <TableCell align="right">{totalItems}</TableCell>
-                <TableCell align="right">
-                  {totalAmount.toLocaleString()}
-                </TableCell>
-                <TableCell>
-                  <StatusChip status={status} />
-                </TableCell>
-                <TableCell>{formatDate(createdAt)}</TableCell>
-                <TableCell>
-                  <PaymentMethodChip method={paymentMethod} />
-                </TableCell>
-                <TableCell>
-                  <OrderDetailsDrawer />
-                </TableCell>
-              </TableRow>
-            )
-          )}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <>
+      <TableContainer component={Paper}>
+        <Table
+          stickyHeader
+          aria-label="orders table"
+          sx={{ textWrap: "nowrap" }}
+        >
+          <TableHead sx={{ backgroundColor: "action.selected" }}>
+            <TableRow>
+              <TableCell>Order ID</TableCell>
+              <TableCell align="right">Table Number</TableCell>
+              <TableCell align="right">Total Items</TableCell>
+              <TableCell align="right">Total Amount</TableCell>
+              <TableCell>Order Status</TableCell>
+              <TableCell>Created At</TableCell>
+              <TableCell>Payment Method</TableCell>
+              <TableCell>Actions</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {orders.map(
+              ({
+                orderId,
+                tableNumber,
+                totalItems,
+                totalAmount,
+                status,
+                paymentMethod,
+                createdAt,
+              }) => (
+                <TableRow
+                  hover
+                  key={orderId}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {orderId}
+                  </TableCell>
+                  <TableCell align="right">{tableNumber}</TableCell>
+                  <TableCell align="right">{totalItems}</TableCell>
+                  <TableCell align="right">
+                    {totalAmount.toLocaleString()}
+                  </TableCell>
+                  <TableCell>
+                    <StatusChip status={status} />
+                  </TableCell>
+                  <TableCell>{formatDate(createdAt)}</TableCell>
+                  <TableCell>
+                    <PaymentMethodChip method={paymentMethod} />
+                  </TableCell>
+                  <TableCell>
+                    <Tooltip placement="top" title="View order details">
+                      <IconButton
+                        onClick={handleOpen}
+                        aria-label="View order details"
+                      >
+                        <VisibilityOutlinedIcon fontSize="small" />
+                      </IconButton>
+                    </Tooltip>
+                  </TableCell>
+                </TableRow>
+              )
+            )}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <OrderDetailsDrawer open={open} handleClose={handleClose} />
+    </>
   );
 }

@@ -8,7 +8,7 @@ import "react-day-picker/style.css";
 import { useEffect, useRef, useState } from "react";
 
 interface DateFilterProps {
-  placeholder: string,
+  placeholder: string;
   futureDate: boolean;
 }
 
@@ -16,7 +16,6 @@ export default function DateFilter({
   placeholder,
   futureDate = true,
 }: DateFilterProps) {
-
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [open, setOpen] = useState(false);
@@ -35,7 +34,10 @@ export default function DateFilter({
   // Close on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
         setOpen(false);
       }
     };
@@ -47,6 +49,11 @@ export default function DateFilter({
     <Box component="div" ref={containerRef} sx={{ position: "relative" }}>
       <TextField
         fullWidth
+        slotProps={{
+          input: {
+            readOnly: true,
+          },
+        }}
         size="small"
         variant="outlined"
         label="Date"
@@ -55,7 +62,16 @@ export default function DateFilter({
         onFocus={() => setOpen(true)}
       />
       {open && (
-        <Card variant="elevation" sx={{ position: "absolute", bgcolor: "background.paper", zIndex: 3, p: 2 }}>
+        <Card
+          variant="elevation"
+          sx={{
+            position: "absolute",
+            bgcolor: "background.paper",
+            zIndex: 3,
+            boxShadow: 6,
+            p: 2,
+          }}
+        >
           <DayPicker
             mode="range"
             disabled={disabled}

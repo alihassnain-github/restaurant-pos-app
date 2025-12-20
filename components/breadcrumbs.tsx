@@ -17,7 +17,7 @@ export default function Breadcrumbs({
   breadcrumbs: Breadcrumb[];
 }) {
   return (
-    <Box mb={3}>
+    <Box mb={2}>
       <MuiBreadcrumbs aria-label="breadcrumb">
         {breadcrumbs.map((crumb, index) => {
           const isLast = index === breadcrumbs.length - 1;
