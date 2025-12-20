@@ -1,0 +1,68 @@
+"use client";
+
+import Paper from "@mui/material/Paper";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import TextField from "@mui/material/TextField";
+import InputLabel from '@mui/material/InputLabel';
+import Button from "@mui/material/Button";
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+
+export default function EditCategoryForm() {
+    return (
+        <Card component={Paper} variant="outlined" sx={{ mt: 2, p: 1 }}>
+            <CardContent>
+                <Grid container spacing={3}>
+
+                    <Grid size={{ xs: 12, sm: 6 }}>
+                        <TextField
+                            fullWidth
+                            label="Name"
+                            variant="outlined"
+                            size="small"
+                        />
+                    </Grid>
+
+                    <Grid size={{ xs: 12, sm: 6 }}>
+                        <FormControl fullWidth size="small">
+                            <InputLabel>Status</InputLabel>
+                            <Select
+                                label="Status"
+                            >
+                                <MenuItem value={"active"}>Active</MenuItem>
+                                <MenuItem value={"inactive"}>Inactive</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </Grid>
+
+                    <Grid size={{ xs: 12, sm: 6 }}>
+                        <TextField
+                            fullWidth
+                            multiline
+                            rows={4}
+                            label="Description"
+                            variant="outlined"
+                            size="small"
+                        />
+                    </Grid>
+
+                    <Box
+                        component="div"
+                        sx={{
+                            display: "flex",
+                            justifyContent: "flex-end",
+                            width: "100%",
+                            mt: 1,
+                        }}
+                    >
+                        <Button variant="contained">Edit Category</Button>
+                    </Box>
+                </Grid>
+            </CardContent>
+        </Card>
+    )
+}

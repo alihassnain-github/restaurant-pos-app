@@ -9,7 +9,7 @@ import Link from "next/link";
 export function CreateTable() {
   return (
     <Link href={"/dashboard/tables/create"}>
-      <Button variant="contained">Create Table</Button>
+      <Button variant="contained" size="small">Create Table</Button>
     </Link>
   );
 }
