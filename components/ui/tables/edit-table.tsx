@@ -12,86 +12,86 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
 const areas = [
-    { id: 1, name: "Main Hall", prefix: "M" },
-    { id: 2, name: "Outdoor", prefix: "O" },
-    { id: 3, name: "VIP Lounge", prefix: "V" },
-    { id: 4, name: "Terrace", prefix: "T" },
+  { id: 1, name: "Main Hall", prefix: "M" },
+  { id: 2, name: "Outdoor", prefix: "O" },
+  { id: 3, name: "VIP Lounge", prefix: "V" },
+  { id: 4, name: "Terrace", prefix: "T" },
 ];
 
 export default function EditTableForm() {
-    return (
-        <Card component={Paper} variant="outlined" sx={{ mt: 2, p: 1 }}>
-            <CardContent>
-                <Grid container spacing={3}>
-                    <Grid size={{ xs: 12, sm: 6 }}>
-                        <Autocomplete
-                            freeSolo
-                            options={areas.map((area) => area.name)}
-                            renderInput={(params) => (
-                                <TextField
-                                    {...params}
-                                    size="small"
-                                    label="Area / Site"
-                                    variant="outlined"
-                                    fullWidth
-                                    placeholder="Select Area"
-                                />
-                            )}
-                        />
-                    </Grid>
+  return (
+    <Card component={Paper} variant="outlined" sx={{ mt: 2, p: 1 }}>
+      <CardContent>
+        <Grid container spacing={3}>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <Autocomplete
+              freeSolo
+              options={areas.map((area) => area.name)}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  size="small"
+                  label="Area / Site"
+                  variant="outlined"
+                  fullWidth
+                  placeholder="Select Area"
+                />
+              )}
+            />
+          </Grid>
 
-                    <Grid size={{ xs: 12, sm: 6 }}>
-                        <TextField
-                            fullWidth
-                            label="Table Number"
-                            variant="outlined"
-                            size="small"
-                            defaultValue="1001"
-                            slotProps={{
-                                input: {
-                                    readOnly: true,
-                                },
-                            }}
-                            helperText="Auto-generated ID"
-                        />
-                    </Grid>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <TextField
+              fullWidth
+              label="Table Number"
+              variant="outlined"
+              size="small"
+              defaultValue="1001"
+              slotProps={{
+                input: {
+                  readOnly: true,
+                },
+              }}
+              helperText="Auto-generated ID"
+            />
+          </Grid>
 
-                    <Grid size={12}>
-                        <TextField
-                            fullWidth
-                            size="small"
-                            label="Capacity"
-                            variant="outlined"
-                            type="number"
-                            placeholder="Enter Capacity"
-                            slotProps={{
-                                htmlInput: {
-                                    min: 1,
-                                    step: 1,
-                                },
-                            }}
-                        />
-                    </Grid>
+          <Grid size={12}>
+            <TextField
+              fullWidth
+              size="small"
+              label="Capacity"
+              variant="outlined"
+              type="number"
+              placeholder="Enter Capacity"
+              slotProps={{
+                htmlInput: {
+                  min: 1,
+                  step: 1,
+                },
+              }}
+            />
+          </Grid>
 
-                    <FormControlLabel
-                        control={<Switch defaultChecked color="primary" />}
-                        label="In Service"
-                        sx={{ userSelect: "none" }}
-                    />
+          <FormControlLabel
+            control={<Switch defaultChecked color="primary" />}
+            label="In Service"
+            sx={{ userSelect: "none" }}
+          />
 
-                    <Box
-                        component="div"
-                        sx={{
-                            display: "flex",
-                            justifyContent: "flex-end",
-                            width: "100%",
-                            mt: 1,
-                        }}
-                    >
-                        <Button variant="contained">Edit Table</Button>
-                    </Box>
-                </Grid>
-            </CardContent>
-        </Card>
-    )
+          <Box
+            component="div"
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+              width: "100%",
+              mt: 1,
+            }}
+          >
+            <Button variant="contained">Edit Table</Button>
+          </Box>
+        </Grid>
+      </CardContent>
+    </Card>
+  );
 }

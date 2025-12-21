@@ -6,19 +6,19 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
 
-export function CreateCategory() {
+export function CreateItem() {
   return (
-    <Link href={"/dashboard/categories/create"}>
+    <Link href={"/dashboard/items/create"}>
       <Button variant="contained" size="small">
-        Create Category
+        Create Item
       </Button>
     </Link>
   );
 }
 
-export function EditCategory() {
+export function EditItem() {
   return (
-    <Link href={"/dashboard/categories/1/edit"}>
+    <Link href={"/dashboard/items/1/edit"}>
       <IconButton size="medium" aria-label="edit" color="primary">
         <DriveFileRenameOutlineOutlinedIcon fontSize="small" />
       </IconButton>
@@ -26,11 +26,11 @@ export function EditCategory() {
   );
 }
 
-interface DeleteCategoryProps {
+interface DeleteItemProps {
   handleOpen: () => void;
 }
 
-export function DeleteCategory({ handleOpen }: DeleteCategoryProps) {
+export function DeleteItem({ handleOpen }: DeleteItemProps) {
   return (
     <IconButton
       size="medium"

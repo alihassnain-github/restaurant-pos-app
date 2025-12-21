@@ -1,15 +1,15 @@
 import Breadcrumbs from "@/components/breadcrumbs";
-import Form from "@/components/ui/categories/edit-category";
+import Form from "@/components/ui/items/edit-item";
 
 export default function Page() {
   return (
     <>
       <Breadcrumbs
         breadcrumbs={[
-          { label: "Categories", href: "/dashboard/categories", active: false },
+          { label: "Items", href: "/dashboard/items", active: false },
           {
-            label: "Edit Category",
-            href: "/dashboard/categories/id/edit",
+            label: "Edit Item",
+            href: "/dashboard/items/1/edit",
             active: true,
           },
         ]}

@@ -28,12 +28,12 @@ export default function DeleteModal({ open, handleClose }: DeleteModalProps) {
         }}
       >
         <Typography variant="h6" mb={1}>
-          Delete Category
+          Delete Item
         </Typography>
 
         <Typography variant="body2" color="text.secondary" mb={3}>
-          Are you sure you want to delete category with name{" "}
-          <strong>Beverages</strong>? This action cannot be undone.
+          Are you sure you want to delete item with name <strong>Pizza</strong>?
+          This action cannot be undone.
         </Typography>
 
         <Stack direction="row" spacing={1} justifyContent="flex-end">
