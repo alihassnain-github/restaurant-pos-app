@@ -2,13 +2,7 @@
 
 import { PageLoader } from "@/components/loader";
 import { useTheme, useMediaQuery } from "@mui/material";
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 
 type SidebarContextType = {
   isDrawerOpen: boolean;

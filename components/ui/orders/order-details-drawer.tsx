@@ -7,11 +7,10 @@ import IconButton from "@mui/material/IconButton";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
-import OrderStatusChip from "@/components/status-chip";
-import PaymentMethodChip from "@/components/payment-chip";
 import ItemCard from "./item-card";
 import CloseIcon from "@mui/icons-material/Close";
 import NextLink from "@/components/next-link";
+import { StatusChip } from "@/components/status-chip";
 
 export const OrderItems = [
   {
@@ -98,7 +97,7 @@ export default function OrderDetailsDrawer({
                 # 1001
               </Typography>
             </Box>
-            <OrderStatusChip status="ready" />
+            <StatusChip status="ready" />
           </Box>
           <Tooltip placement="top" title="Close">
             <IconButton onClick={handleClose} aria-label="Close order details">
@@ -275,7 +274,7 @@ export default function OrderDetailsDrawer({
             >
               Payment Method:
             </Typography>
-            <PaymentMethodChip method="cash" />
+            <StatusChip status="cash" />
           </Box>
         </Box>
       </Box>

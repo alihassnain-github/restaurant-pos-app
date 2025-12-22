@@ -4,6 +4,8 @@ import Grid from "@mui/material/Grid";
 import { CreateItem } from "@/components/ui/items/buttons";
 import ItemsTable from "@/components/ui/items/table";
 import Search from "@/components/search";
+import CategorySelect from "@/components/ui/items/category-status";
+import SelectStatus from "@/components/status";
 
 export default function Page() {
   return (
@@ -25,6 +27,12 @@ export default function Page() {
         <Grid container spacing={2}>
           <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Search placeholder="Search by Name" />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <CategorySelect />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <SelectStatus />
           </Grid>
         </Grid>
       </Box>

@@ -10,10 +10,10 @@ import Switch from "@mui/material/Switch";
 import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
 import { formatDate } from "@/app/lib/utils";
-import TableStatusChip from "./status-chip";
 import { DeleteTable, EditTable } from "./buttons";
 import { useState } from "react";
 import DeleteModal from "./delete-modal";
+import { StatusChip } from "@/components/status-chip";
 
 type Table = {
   tableId: string;
@@ -135,7 +135,7 @@ export default function TablesTable() {
                     <Switch checked={inservice} />
                   </TableCell>
                   <TableCell>
-                    <TableStatusChip status={status} />
+                    <StatusChip status={status} />
                   </TableCell>
                   <TableCell>{formatDate(createdAt)}</TableCell>
                   <TableCell>

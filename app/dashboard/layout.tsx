@@ -4,6 +4,7 @@ import SideNav from "@/components/sidenav";
 import Header from "@/components/header";
 import MainWrapper from "@/components/main";
 import SidebarContextProvider from "@/context/sidebar-provider";
+import { Providers } from "@/components/providers";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -12,13 +13,13 @@ interface DashboardLayoutProps {
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <SidebarContextProvider>
-      <Box sx={{ display: "flex", width: "100%" }} component={Paper}>
-        <Header />
-
-        <SideNav />
-
-        <MainWrapper>{children}</MainWrapper>
-      </Box>
+      <Providers>
+        <Box sx={{ display: "flex", width: "100%" }} component={Paper}>
+          <Header />
+          <SideNav />
+          <MainWrapper>{children}</MainWrapper>
+        </Box>
+      </Providers>
     </SidebarContextProvider>
   );
 }

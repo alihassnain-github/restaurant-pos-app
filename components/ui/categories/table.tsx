@@ -11,9 +11,9 @@ import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
 import { formatDate } from "@/app/lib/utils";
 import { useState } from "react";
-import CategoryStatusChip from "./status-chip";
 import { DeleteCategory, EditCategory } from "./buttons";
 import DeleteModal from "./delete-modal";
+import { StatusChip } from "@/components/status-chip";
 
 type Category = {
   id: string;
@@ -157,7 +157,7 @@ export default function CategoriesTable() {
                     </Typography>
                   </TableCell>
                   <TableCell>
-                    <CategoryStatusChip status={status} />
+                    <StatusChip status={status} />
                   </TableCell>
                   <TableCell>{formatDate(createdAt)}</TableCell>
                   <TableCell>

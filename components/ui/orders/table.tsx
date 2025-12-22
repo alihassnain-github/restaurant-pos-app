@@ -8,13 +8,12 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { formatDate } from "@/app/lib/utils";
-import StatusChip from "@/components/status-chip";
-import PaymentMethodChip from "@/components/payment-chip";
 import OrderDetailsDrawer from "./order-details-drawer";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { useState } from "react";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
+import { StatusChip } from "@/components/status-chip";
 
 type Order = {
   orderId: string;
@@ -173,7 +172,7 @@ export default function OrdersTable() {
                   </TableCell>
                   <TableCell>{formatDate(createdAt)}</TableCell>
                   <TableCell>
-                    <PaymentMethodChip method={paymentMethod} />
+                    <StatusChip status={paymentMethod} />
                   </TableCell>
                   <TableCell>
                     <Tooltip placement="top" title="View order details">

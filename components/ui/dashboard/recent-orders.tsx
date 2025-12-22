@@ -12,7 +12,7 @@ import Paper from "@mui/material/Paper";
 import NextLink from "next/link";
 import { lusitana } from "@/app/fonts";
 import Button from "@mui/material/Button";
-import OrderStatusChip from "@/components/status-chip";
+import { StatusChip } from "@/components/status-chip";
 
 export type Status = "pending" | "preparing" | "ready" | "paid" | "cancelled";
 
@@ -27,7 +27,7 @@ export default function RecentOrders() {
         }
         subheader={
           <Typography variant="body2" color="text.secondary">
-            Today's activity
+            Today&apos;s activity
           </Typography>
         }
         action={
@@ -58,7 +58,7 @@ export default function RecentOrders() {
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
-                    <OrderStatusChip status={order.status as Status} />
+                    <StatusChip status={order.status as Status} />
                   </TableCell>
                   <TableCell sx={{ textWrap: "nowrap" }} align="right">
                     <Typography fontFamily={lusitana.style.fontFamily}>

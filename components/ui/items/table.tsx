@@ -12,7 +12,7 @@ import { formatDate } from "@/app/lib/utils";
 import { DeleteItem, EditItem } from "./buttons";
 import { useState } from "react";
 import DeleteModal from "./delete-modal";
-import CategoryStatusChip from "../categories/status-chip";
+import { StatusChip } from "@/components/status-chip";
 
 type Item = {
   itemId: string;
@@ -166,7 +166,7 @@ export default function ItemsTable() {
                     {variants ? variants : "-"}
                   </TableCell>
                   <TableCell>
-                    <CategoryStatusChip status={status} />
+                    <StatusChip status={status} />
                   </TableCell>
                   <TableCell>{formatDate(createdAt)}</TableCell>
                   <TableCell>

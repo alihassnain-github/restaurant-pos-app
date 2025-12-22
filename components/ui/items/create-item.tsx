@@ -1,7 +1,6 @@
 "use client";
 
 import Table from "@mui/material/Table";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import IconButton from "@mui/material/IconButton";
 import TableBody from "@mui/material/TableBody";
