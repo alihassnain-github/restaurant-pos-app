@@ -24,6 +24,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import MoreTimeIcon from "@mui/icons-material/MoreTime";
 import { useState } from "react";
+import ProductModal from "./product-modal";
 
 const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
@@ -66,6 +67,18 @@ export default function CreateMenuForm() {
               size="small"
             />
           </Grid>
+
+          <Box
+            component="div"
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+              width: "100%",
+              mt: 1,
+            }}
+          >
+            <ProductModal />
+          </Box>
 
           <Box
             component="div"

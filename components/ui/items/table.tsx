@@ -29,7 +29,7 @@ export const items: Item[] = [
     itemId: "ITM-001",
     name: "Margherita Pizza",
     category: "Main Course",
-    price: 850,
+    price: null, // Has variants, so price is null
     status: "active",
     variants: 3,
     createdAt: new Date("2024-12-01T10:00:00"),
@@ -38,7 +38,7 @@ export const items: Item[] = [
     itemId: "ITM-002",
     name: "Caesar Salad",
     category: "Appetizers",
-    price: 450,
+    price: 450, // No variants, so has price
     status: "active",
     variants: null,
     createdAt: new Date("2024-12-01T10:15:00"),
@@ -47,7 +47,7 @@ export const items: Item[] = [
     itemId: "ITM-003",
     name: "Chicken Biryani",
     category: "Main Course",
-    price: null,
+    price: null, // Has variants, so price is null
     status: "active",
     variants: 4,
     createdAt: new Date("2024-12-02T09:30:00"),
@@ -56,7 +56,7 @@ export const items: Item[] = [
     itemId: "ITM-004",
     name: "Chocolate Lava Cake",
     category: "Desserts",
-    price: 380,
+    price: 380, // No variants, so has price
     status: "active",
     variants: null,
     createdAt: new Date("2024-12-02T11:45:00"),
@@ -65,7 +65,7 @@ export const items: Item[] = [
     itemId: "ITM-005",
     name: "Fresh Orange Juice",
     category: "Beverages",
-    price: null,
+    price: null, // Has variants, so price is null
     status: "active",
     variants: 2,
     createdAt: new Date("2024-12-03T08:20:00"),
@@ -74,7 +74,7 @@ export const items: Item[] = [
     itemId: "ITM-006",
     name: "Garlic Bread",
     category: "Appetizers",
-    price: 250,
+    price: 250, // No variants, so has price
     status: "inactive",
     variants: null,
     createdAt: new Date("2024-12-03T14:30:00"),
@@ -83,7 +83,7 @@ export const items: Item[] = [
     itemId: "ITM-007",
     name: "Beef Burger",
     category: "Main Course",
-    price: null,
+    price: null, // Has variants, so price is null
     status: "active",
     variants: 5,
     createdAt: new Date("2024-12-04T12:00:00"),
@@ -92,7 +92,7 @@ export const items: Item[] = [
     itemId: "ITM-008",
     name: "Tiramisu",
     category: "Desserts",
-    price: 420,
+    price: 420, // No variants, so has price
     status: "active",
     variants: null,
     createdAt: new Date("2024-12-04T15:10:00"),
@@ -101,7 +101,7 @@ export const items: Item[] = [
     itemId: "ITM-009",
     name: "Iced Latte",
     category: "Beverages",
-    price: null,
+    price: null, // Has variants, so price is null
     status: "active",
     variants: 3,
     createdAt: new Date("2024-12-05T09:45:00"),
@@ -110,7 +110,7 @@ export const items: Item[] = [
     itemId: "ITM-010",
     name: "Spring Rolls",
     category: "Appetizers",
-    price: 320,
+    price: 320, // No variants, so has price
     status: "inactive",
     variants: null,
     createdAt: new Date("2024-12-05T16:20:00"),
