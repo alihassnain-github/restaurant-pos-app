@@ -241,6 +241,9 @@ export default function ProductModal() {
             >
                 Add Items
             </Button>
+            <div>
+                Modal
+            </div>
         </>
     )
 }
