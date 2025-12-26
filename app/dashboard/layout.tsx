@@ -1,10 +1,10 @@
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import SideNav from "@/components/sidenav";
-import Header from "@/components/header";
-import MainWrapper from "@/components/main";
-import SidebarContextProvider from "@/context/sidebar-provider";
-import { Providers } from "@/components/providers";
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import SideNav from '@/components/sidenav';
+import Header from '@/components/header';
+import MainWrapper from '@/components/main';
+import SidebarContextProvider from '@/context/sidebar-provider';
+import { Providers } from '@/components/providers';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <SidebarContextProvider>
       <Providers>
-        <Box sx={{ display: "flex", width: "100%" }} component={Paper}>
+        <Box sx={{ display: 'flex', width: '100%' }} component={Paper}>
           <Header />
           <SideNav />
           <MainWrapper>{children}</MainWrapper>

@@ -1,15 +1,15 @@
-import Chip from "@mui/material/Chip";
-import { ChipProps } from "@mui/material/Chip";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import EventSeatIcon from "@mui/icons-material/EventSeat";
-import PaidIcon from "@mui/icons-material/Paid";
-import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CancelIcon from "@mui/icons-material/Cancel";
-import PaymentsIcon from "@mui/icons-material/Payments";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import Chip from '@mui/material/Chip';
+import { ChipProps } from '@mui/material/Chip';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import EventSeatIcon from '@mui/icons-material/EventSeat';
+import PaidIcon from '@mui/icons-material/Paid';
+import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CancelIcon from '@mui/icons-material/Cancel';
+import PaymentsIcon from '@mui/icons-material/Payments';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 /**
  * Central registry for all chip states
@@ -17,70 +17,70 @@ import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 const STATUS_CONFIG = {
   /* Order status */
   pending: {
-    label: "Pending",
+    label: 'Pending',
     icon: HourglassBottomIcon,
-    color: "default",
+    color: 'default',
   },
   preparing: {
-    label: "Preparing",
+    label: 'Preparing',
     icon: AutorenewIcon,
-    color: "info",
+    color: 'info',
   },
   ready: {
-    label: "Ready",
+    label: 'Ready',
     icon: CheckCircleIcon,
-    color: "primary",
+    color: 'primary',
   },
   paid: {
-    label: "Paid",
+    label: 'Paid',
     icon: PaidIcon,
-    color: "success",
+    color: 'success',
   },
   cancelled: {
-    label: "Cancelled",
+    label: 'Cancelled',
     icon: CancelIcon,
-    color: "error",
+    color: 'error',
   },
 
   /* Payment methods */
   cash: {
-    label: "Cash",
+    label: 'Cash',
     icon: PaymentsIcon,
-    color: "default",
+    color: 'default',
   },
   card: {
-    label: "Card",
+    label: 'Card',
     icon: CreditCardIcon,
-    color: "primary",
+    color: 'primary',
   },
   wallet: {
-    label: "Wallet",
+    label: 'Wallet',
     icon: AccountBalanceWalletIcon,
-    color: "success",
+    color: 'success',
   },
 
   /* Active / inactive */
   active: {
-    label: "Active",
+    label: 'Active',
     icon: CheckCircleIcon,
-    color: "success",
+    color: 'success',
   },
   inactive: {
-    label: "Inactive",
+    label: 'Inactive',
     icon: CancelIcon,
-    color: "default",
+    color: 'default',
   },
 
   /* Table status */
   available: {
-    label: "Available",
+    label: 'Available',
     icon: CheckCircleOutlineIcon,
-    color: "success",
+    color: 'success',
   },
   occupied: {
-    label: "Occupied",
+    label: 'Occupied',
     icon: EventSeatIcon,
-    color: "error",
+    color: 'error',
   },
 } as const;
 
@@ -88,10 +88,10 @@ type StatusKey = keyof typeof STATUS_CONFIG;
 
 interface StatusChipProps {
   status: StatusKey;
-  size?: ChipProps["size"];
+  size?: ChipProps['size'];
 }
 
-export function StatusChip({ status, size = "small" }: StatusChipProps) {
+export function StatusChip({ status, size = 'small' }: StatusChipProps) {
   const config = STATUS_CONFIG[status];
   const Icon = config.icon;
 

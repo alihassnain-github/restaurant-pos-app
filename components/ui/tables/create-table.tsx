@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import Paper from "@mui/material/Paper";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Autocomplete from "@mui/material/Autocomplete";
-import TextField from "@mui/material/TextField";
-import Switch from "@mui/material/Switch";
-import Button from "@mui/material/Button";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
+import Paper from '@mui/material/Paper';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+import Switch from '@mui/material/Switch';
+import Button from '@mui/material/Button';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 const areas = [
-  { id: 1, name: "Main Hall", prefix: "M" },
-  { id: 2, name: "Outdoor", prefix: "O" },
-  { id: 3, name: "VIP Lounge", prefix: "V" },
-  { id: 4, name: "Terrace", prefix: "T" },
+  { id: 1, name: 'Main Hall', prefix: 'M' },
+  { id: 2, name: 'Outdoor', prefix: 'O' },
+  { id: 3, name: 'VIP Lounge', prefix: 'V' },
+  { id: 4, name: 'Terrace', prefix: 'T' },
 ];
 
 export default function CreateTableForm() {
@@ -76,15 +76,15 @@ export default function CreateTableForm() {
           <FormControlLabel
             control={<Switch defaultChecked color="primary" />}
             label="In Service"
-            sx={{ userSelect: "none" }}
+            sx={{ userSelect: 'none' }}
           />
 
           <Box
             component="div"
             sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              width: "100%",
+              display: 'flex',
+              justifyContent: 'flex-end',
+              width: '100%',
               mt: 1,
             }}
           >

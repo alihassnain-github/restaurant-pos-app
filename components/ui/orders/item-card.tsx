@@ -1,9 +1,9 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Image from "next/image";
-import InsertPhotoOutlinedIcon from "@mui/icons-material/InsertPhotoOutlined";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Image from 'next/image';
+import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 
 interface ItemCardProps {
   image: string | null;
@@ -25,14 +25,14 @@ export default function ItemCard({
         flexShrink: 0,
         borderRadius: 3,
         boxShadow: 2,
-        overflow: "hidden",
+        overflow: 'hidden',
       }}
     >
       {/* Image wrapper */}
       <Box
         sx={{
-          position: "relative",
-          width: "100%",
+          position: 'relative',
+          width: '100%',
           height: 140,
         }}
       >
@@ -42,17 +42,17 @@ export default function ItemCard({
             alt={title}
             fill
             sizes="200px"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: 'cover' }}
           />
         ) : (
           <Box
             sx={{
-              bgcolor: "action.selected",
-              position: "relative",
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              bgcolor: 'action.selected',
+              position: 'relative',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
               height: 140,
             }}
           >

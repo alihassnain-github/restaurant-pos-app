@@ -1,40 +1,40 @@
-"use client";
+'use client';
 
-import Table from "@mui/material/Table";
-import Switch from "@mui/material/Switch";
-import IconButton from "@mui/material/IconButton";
-import TableBody from "@mui/material/TableBody";
-import DeleteIcon from "@mui/icons-material/Delete";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import AddIcon from "@mui/icons-material/Add";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Autocomplete from "@mui/material/Autocomplete";
-import TextField from "@mui/material/TextField";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import ImageUpload from "@/components/image-upload";
-import { useState } from "react";
+import Table from '@mui/material/Table';
+import Switch from '@mui/material/Switch';
+import IconButton from '@mui/material/IconButton';
+import TableBody from '@mui/material/TableBody';
+import DeleteIcon from '@mui/icons-material/Delete';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import AddIcon from '@mui/icons-material/Add';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import ImageUpload from '@/components/image-upload';
+import { useState } from 'react';
 
 const categories = [
-  { id: 1, name: "Appetizers" },
-  { id: 2, name: "Main Course" },
-  { id: 3, name: "Desserts" },
-  { id: 4, name: "Beverages" },
+  { id: 1, name: 'Appetizers' },
+  { id: 2, name: 'Main Course' },
+  { id: 3, name: 'Desserts' },
+  { id: 4, name: 'Beverages' },
 ];
 
 export default function EditItemForm() {
   const [variants, setVariants] = useState<number[]>([]);
-  const [unit, setUnit] = useState("");
+  const [unit, setUnit] = useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
     setUnit(event.target.value as string);
@@ -114,9 +114,9 @@ export default function EditItemForm() {
           <Box
             component="div"
             sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              width: "100%",
+              display: 'flex',
+              justifyContent: 'flex-end',
+              width: '100%',
               mt: 1,
             }}
           >
@@ -134,10 +134,10 @@ export default function EditItemForm() {
           {variants.length > 0 && (
             <TableContainer component={Paper}>
               <Table aria-label="variant table">
-                <TableHead sx={{ backgroundColor: "action.selected" }}>
+                <TableHead sx={{ backgroundColor: 'action.selected' }}>
                   <TableRow>
                     <TableCell>
-                      {unit === "none" ? "Variant" : "Quantity"}
+                      {unit === 'none' ? 'Variant' : 'Quantity'}
                     </TableCell>
                     <TableCell>Price</TableCell>
                     <TableCell>Status</TableCell>
@@ -148,7 +148,7 @@ export default function EditItemForm() {
                   {variants.map((id) => (
                     <TableRow
                       key={id}
-                      sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                       <TableCell component="th" scope="row">
                         <TextField
@@ -195,9 +195,9 @@ export default function EditItemForm() {
           <Box
             component="div"
             sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              width: "100%",
+              display: 'flex',
+              justifyContent: 'flex-end',
+              width: '100%',
               mt: 1,
             }}
           >

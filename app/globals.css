@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 .MuiChartsLegend-horizontal {
   display: flex;

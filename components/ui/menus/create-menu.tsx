@@ -1,32 +1,32 @@
-"use client";
+'use client';
 
-import { TimePicker } from "@mui/x-date-pickers/TimePicker";
-import TableContainer from "@mui/material/TableContainer";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import TableCell from "@mui/material/TableCell";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Chip from "@mui/material/Chip";
-import Select from "@mui/material/Select";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
-import DeleteIcon from "@mui/icons-material/Delete";
-import IconButton from "@mui/material/IconButton";
-import MoreTimeIcon from "@mui/icons-material/MoreTime";
-import { useState } from "react";
-import ProductModal from "./product-modal";
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+import TableContainer from '@mui/material/TableContainer';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Chip from '@mui/material/Chip';
+import Select from '@mui/material/Select';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
+import MoreTimeIcon from '@mui/icons-material/MoreTime';
+import { useState } from 'react';
+import ProductModal from './product-modal';
 
-const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 export default function CreateMenuForm() {
   const [availability, SetAvailability] = useState<number[]>([]);
@@ -71,9 +71,9 @@ export default function CreateMenuForm() {
           <Box
             component="div"
             sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              width: "100%",
+              display: 'flex',
+              justifyContent: 'flex-end',
+              width: '100%',
               mt: 1,
             }}
           >
@@ -83,9 +83,9 @@ export default function CreateMenuForm() {
           <Box
             component="div"
             sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              width: "100%",
+              display: 'flex',
+              justifyContent: 'flex-end',
+              width: '100%',
               mt: 1,
             }}
           >
@@ -103,7 +103,7 @@ export default function CreateMenuForm() {
           {availability.length > 0 && (
             <TableContainer component={Paper}>
               <Table aria-label="availability table">
-                <TableHead sx={{ backgroundColor: "action.selected" }}>
+                <TableHead sx={{ backgroundColor: 'action.selected' }}>
                   <TableRow>
                     <TableCell>Days</TableCell>
                     <TableCell>Start Time</TableCell>
@@ -115,10 +115,13 @@ export default function CreateMenuForm() {
                   {availability.map((id) => (
                     <TableRow
                       key={id}
-                      sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                       <TableCell component="th" scope="row">
-                        <FormControl fullWidth size="small" sx={{ width: 300 }}>
+                        <FormControl
+                          size="small"
+                          sx={{ width: '100%', minWidth: 200 }}
+                        >
                           <InputLabel>Days</InputLabel>
                           <Select
                             defaultValue={[]}
@@ -127,8 +130,8 @@ export default function CreateMenuForm() {
                             renderValue={(selected) => (
                               <Box
                                 sx={{
-                                  display: "flex",
-                                  flexWrap: "wrap",
+                                  display: 'flex',
+                                  flexWrap: 'wrap',
                                   gap: 0.5,
                                 }}
                               >
@@ -155,7 +158,7 @@ export default function CreateMenuForm() {
                           label="Start Time"
                           slotProps={{
                             textField: {
-                              size: "small",
+                              size: 'small',
                               fullWidth: true,
                             },
                           }}
@@ -166,7 +169,7 @@ export default function CreateMenuForm() {
                           label="End Time"
                           slotProps={{
                             textField: {
-                              size: "small",
+                              size: 'small',
                               fullWidth: true,
                             },
                           }}
@@ -191,9 +194,9 @@ export default function CreateMenuForm() {
           <Box
             component="div"
             sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              width: "100%",
+              display: 'flex',
+              justifyContent: 'flex-end',
+              width: '100%',
               mt: 1,
             }}
           >

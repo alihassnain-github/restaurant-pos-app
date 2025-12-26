@@ -1,59 +1,59 @@
-"use client";
+'use client';
 
-import Avatar from "@mui/material/Avatar";
-import Drawer from "@mui/material/Drawer";
-import Tooltip from "@mui/material/Tooltip";
-import IconButton from "@mui/material/IconButton";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import Typography from "@mui/material/Typography";
-import ItemCard from "./item-card";
-import CloseIcon from "@mui/icons-material/Close";
-import NextLink from "@/components/next-link";
-import { StatusChip } from "@/components/status-chip";
+import Avatar from '@mui/material/Avatar';
+import Drawer from '@mui/material/Drawer';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import ItemCard from './item-card';
+import CloseIcon from '@mui/icons-material/Close';
+import NextLink from '@/components/next-link';
+import { StatusChip } from '@/components/status-chip';
 
 export const OrderItems = [
   {
-    title: "Chicken Biryani",
+    title: 'Chicken Biryani',
     quantity: 1,
-    unit: "plate",
+    unit: 'plate',
     price: 450,
     image: null,
   },
   {
-    title: "Zinger Burger",
+    title: 'Zinger Burger',
     quantity: 2,
-    unit: "item",
+    unit: 'item',
     price: 520,
     image:
-      "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=300",
+      'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=300',
   },
   {
-    title: "Chicken Karahi (Half)",
+    title: 'Chicken Karahi (Half)',
     quantity: 1,
-    unit: "half",
+    unit: 'half',
     price: 1250,
     image:
-      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=300",
+      'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=300',
   },
   {
-    title: "Garlic Naan",
+    title: 'Garlic Naan',
     quantity: 4,
-    unit: "piece",
+    unit: 'piece',
     price: 80,
     image: null,
   },
   {
-    title: "Mint Margarita",
+    title: 'Mint Margarita',
     quantity: 2,
-    unit: "glass",
+    unit: 'glass',
     price: 220,
     image: null,
   },
   {
-    title: "Kheer",
+    title: 'Kheer',
     quantity: 1,
-    unit: "bowl",
+    unit: 'bowl',
     price: 180,
     image: null,
   },
@@ -74,15 +74,15 @@ export default function OrderDetailsDrawer({
         <Box
           component="div"
           sx={{
-            display: "flex",
-            alignItems: "start",
-            justifyContent: "space-between",
+            display: 'flex',
+            alignItems: 'start',
+            justifyContent: 'space-between',
             gap: 2,
           }}
         >
           <Box
             component="div"
-            sx={{ display: "flex", alignItems: "start", gap: 2 }}
+            sx={{ display: 'flex', alignItems: 'start', gap: 2 }}
           >
             <Box component="div">
               <Typography variant="h5" component="h5">
@@ -91,7 +91,7 @@ export default function OrderDetailsDrawer({
               <Typography
                 variant="body1"
                 color="text.secondary"
-                sx={{ fontWeight: "medium" }}
+                sx={{ fontWeight: 'medium' }}
                 component="span"
               >
                 # 1001
@@ -106,14 +106,14 @@ export default function OrderDetailsDrawer({
           </Tooltip>
         </Box>
         <Divider component="div" sx={{ my: 2 }} />
-        <Box component="div" sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+        <Box component="div" sx={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
           <Box
             component="div"
-            sx={{ display: "flex", gap: 1, alignItems: "center" }}
+            sx={{ display: 'flex', gap: 1, alignItems: 'center' }}
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "medium" }}
+              sx={{ fontWeight: 'medium' }}
               component="strong"
             >
               Table Number:
@@ -128,16 +128,16 @@ export default function OrderDetailsDrawer({
           </Box>
           <Box
             component="div"
-            sx={{ display: "flex", gap: 1, alignItems: "center" }}
+            sx={{ display: 'flex', gap: 1, alignItems: 'center' }}
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "medium" }}
+              sx={{ fontWeight: 'medium' }}
               component="strong"
             >
               Created By:
             </Typography>
-            <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+            <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
               <Avatar
                 alt="Ali Raza"
                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=40&w=40"
@@ -146,7 +146,7 @@ export default function OrderDetailsDrawer({
               <NextLink
                 className="text-blue-500 text-sm"
                 prefetch={false}
-                href={""}
+                href={''}
               >
                 Ali Raza
               </NextLink>
@@ -154,11 +154,11 @@ export default function OrderDetailsDrawer({
           </Box>
           <Box
             component="div"
-            sx={{ display: "flex", gap: 1, alignItems: "center" }}
+            sx={{ display: 'flex', gap: 1, alignItems: 'center' }}
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "medium" }}
+              sx={{ fontWeight: 'medium' }}
               component="strong"
             >
               Order Created At:
@@ -173,14 +173,14 @@ export default function OrderDetailsDrawer({
           </Box>
         </Box>
         <Divider component="div" sx={{ my: 2 }} />
-        <Box component="div" sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+        <Box component="div" sx={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
           <Box
             component="div"
-            sx={{ display: "flex", gap: 1, alignItems: "center" }}
+            sx={{ display: 'flex', gap: 1, alignItems: 'center' }}
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "medium" }}
+              sx={{ fontWeight: 'medium' }}
               component="strong"
             >
               Total Items:
@@ -195,11 +195,11 @@ export default function OrderDetailsDrawer({
           </Box>
           <Box
             component="div"
-            sx={{ display: "flex", gap: 1, alignItems: "center" }}
+            sx={{ display: 'flex', gap: 1, alignItems: 'center' }}
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "medium" }}
+              sx={{ fontWeight: 'medium' }}
               component="strong"
             >
               Notes:
@@ -219,14 +219,14 @@ export default function OrderDetailsDrawer({
         </Typography>
         <Box
           sx={{
-            display: "flex",
+            display: 'flex',
             gap: 2,
             mt: 1,
             px: 1,
             pt: 1,
             pb: 1,
-            overflowX: "auto",
-            scrollbarWidth: "thin",
+            overflowX: 'auto',
+            scrollbarWidth: 'thin',
           }}
         >
           {OrderItems.map((item, index) => (
@@ -243,14 +243,14 @@ export default function OrderDetailsDrawer({
         <Typography variant="h6" component="h6">
           Payment Details
         </Typography>
-        <Box component="div" sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+        <Box component="div" sx={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
           <Box
             component="div"
-            sx={{ display: "flex", gap: 1, alignItems: "center" }}
+            sx={{ display: 'flex', gap: 1, alignItems: 'center' }}
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "medium" }}
+              sx={{ fontWeight: 'medium' }}
               component="strong"
             >
               Total Amount:
@@ -265,11 +265,11 @@ export default function OrderDetailsDrawer({
           </Box>
           <Box
             component="div"
-            sx={{ display: "flex", gap: 1, alignItems: "center" }}
+            sx={{ display: 'flex', gap: 1, alignItems: 'center' }}
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "medium" }}
+              sx={{ fontWeight: 'medium' }}
               component="strong"
             >
               Payment Method:

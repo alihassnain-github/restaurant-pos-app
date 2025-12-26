@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { PageLoader } from "@/components/loader";
-import { useTheme, useMediaQuery } from "@mui/material";
-import { createContext, ReactNode, useContext, useState } from "react";
+import { PageLoader } from '@/components/loader';
+import { useTheme, useMediaQuery } from '@mui/material';
+import { createContext, ReactNode, useContext, useState } from 'react';
 
 type SidebarContextType = {
   isDrawerOpen: boolean;
@@ -22,7 +22,7 @@ export default function SidebarContextProvider({
   children: ReactNode;
 }) {
   const theme = useTheme();
-  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"), {
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'), {
     noSsr: true,
   });
 
@@ -47,7 +47,7 @@ export default function SidebarContextProvider({
 
   const isDrawerOpen = isLargeScreen ? desktopOpen : mobileOpen;
 
-  if (typeof window === "undefined") {
+  if (typeof window === 'undefined') {
     return <PageLoader />;
   }
 
@@ -70,7 +70,7 @@ export function useSidebarProps() {
   const context = useContext(SidebarContext);
 
   if (!context) {
-    throw new Error("");
+    throw new Error('');
   }
 
   return context;

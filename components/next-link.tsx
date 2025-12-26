@@ -1,8 +1,8 @@
-import Link, { LinkProps } from "next/link";
-import { ReactNode } from "react";
-import clsx from "clsx";
+import Link, { LinkProps } from 'next/link';
+import { ReactNode } from 'react';
+import clsx from 'clsx';
 
-type UnderlineVariant = "none" | "hover" | "always";
+type UnderlineVariant = 'none' | 'hover' | 'always';
 
 interface NextLinkProps extends LinkProps {
   children: ReactNode;
@@ -13,17 +13,17 @@ interface NextLinkProps extends LinkProps {
 export default function NextLink({
   children,
   className,
-  underline = "hover",
+  underline = 'hover',
   ...linkProps
 }: NextLinkProps) {
   return (
     <Link
       {...linkProps}
       className={clsx(
-        "inline-flex items-center",
-        underline === "none" && "no-underline",
-        underline === "hover" && "no-underline hover:underline",
-        underline === "always" && "underline",
+        'inline-flex items-center',
+        underline === 'none' && 'no-underline',
+        underline === 'hover' && 'no-underline hover:underline',
+        underline === 'always' && 'underline',
         className
       )}
     >

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import MuiBreadcrumbs from "@mui/material/Breadcrumbs";
-import Typography from "@mui/material/Typography";
-import Link from "next/link";
-import { Box } from "@mui/material";
+import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
+import Typography from '@mui/material/Typography';
+import Link from 'next/link';
+import { Box } from '@mui/material';
 
 export interface Breadcrumb {
   label: string;

@@ -1,16 +1,16 @@
-import TablesTable from "@/components/ui/tables/table";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { CreateTable } from "@/components/ui/tables/buttons";
+import TablesTable from '@/components/ui/tables/table';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import { CreateTable } from '@/components/ui/tables/buttons';
 
 export default function Page() {
   return (
     <>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "start",
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'start',
           mb: 2,
         }}
       >

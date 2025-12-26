@@ -1,8 +1,8 @@
-import { ThemeProvider } from "@mui/material/styles";
-import "./globals.css";
-import theme from "./theme";
-import { inter } from "./fonts";
-import { InitColorSchemeScript } from "@mui/material";
+import { ThemeProvider } from '@mui/material/styles';
+import './globals.css';
+import theme from './theme';
+import { inter } from './fonts';
+import { InitColorSchemeScript } from '@mui/material';
 
 export default function RootLayout({
   children,

@@ -6,12 +6,12 @@ export function calculatePercentageChange(
   return ((current - previous) / previous) * 100;
 }
 
-export function formatDate(value: Date, locale: string = "en-US"): string {
+export function formatDate(value: Date, locale: string = 'en-US'): string {
   const date = value instanceof Date ? value : new Date(value);
 
   return new Intl.DateTimeFormat(locale, {
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
   }).format(date);
 }

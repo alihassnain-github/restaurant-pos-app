@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Fullscreen, FullscreenExit } from "@mui/icons-material";
-import IconButton from "@mui/material/IconButton";
-import { useState } from "react";
+import { Fullscreen, FullscreenExit } from '@mui/icons-material';
+import IconButton from '@mui/material/IconButton';
+import { useState } from 'react';
 
 export default function ScreenToggle() {
   const [fullScreen, setFullScreen] = useState(false);

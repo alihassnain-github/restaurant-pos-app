@@ -1,59 +1,59 @@
 export const recentOrders = [
   {
-    orderId: "ORD-1025",
+    orderId: 'ORD-1025',
     tableNumber: 4,
     totalAmount: 2850,
-    status: "paid",
+    status: 'paid',
   },
   {
-    orderId: "ORD-1024",
+    orderId: 'ORD-1024',
     tableNumber: 2,
     totalAmount: 1450,
-    status: "preparing",
+    status: 'preparing',
   },
   {
-    orderId: "ORD-1023",
+    orderId: 'ORD-1023',
     tableNumber: 7,
     totalAmount: 3200,
-    status: "paid",
+    status: 'paid',
   },
   {
-    orderId: "ORD-1022",
+    orderId: 'ORD-1022',
     tableNumber: 1,
     totalAmount: 980,
-    status: "pending",
+    status: 'pending',
   },
   {
-    orderId: "ORD-1021",
+    orderId: 'ORD-1021',
     tableNumber: 5,
     totalAmount: 2100,
-    status: "cancelled",
+    status: 'cancelled',
   },
 ];
 
 export const topSellingItems = [
   {
-    name: "Chicken Biryani",
+    name: 'Chicken Biryani',
     quantitySold: 120,
     totalRevenue: 54000,
   },
   {
-    name: "Zinger Burger",
+    name: 'Zinger Burger',
     quantitySold: 95,
     totalRevenue: 42750,
   },
   {
-    name: "Beef Karahi",
+    name: 'Beef Karahi',
     quantitySold: 60,
     totalRevenue: 72000,
   },
   {
-    name: "Chicken Shawarma",
+    name: 'Chicken Shawarma',
     quantitySold: 85,
     totalRevenue: 38250,
   },
   {
-    name: "Soft Drinks",
+    name: 'Soft Drinks',
     quantitySold: 210,
     totalRevenue: 31500,
   },

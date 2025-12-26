@@ -1,7 +1,7 @@
-import { expenseBreakdown } from "@/data/dashboard/chartData";
-import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
-import { PieChart } from "@mui/x-charts/PieChart";
+import { expenseBreakdown } from '@/data/dashboard/chartData';
+import Card from '@mui/material/Card';
+import Typography from '@mui/material/Typography';
+import { PieChart } from '@mui/x-charts/PieChart';
 
 export default function ExpenseChart() {
   return (
@@ -32,8 +32,8 @@ export default function ExpenseChart() {
         slotProps={{
           legend: {
             sx: { pb: 1 },
-            direction: "horizontal",
-            position: { vertical: "bottom", horizontal: "center" },
+            direction: 'horizontal',
+            position: { vertical: 'bottom', horizontal: 'center' },
           },
         }}
         height={250}

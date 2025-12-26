@@ -1,7 +1,7 @@
-import { styled } from "@mui/material/styles";
-import IconButton from "@mui/material/IconButton";
-import Badge, { badgeClasses } from "@mui/material/Badge";
-import { NotificationsNone } from "@mui/icons-material";
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+import Badge, { badgeClasses } from '@mui/material/Badge';
+import { NotificationsNone } from '@mui/icons-material';
 
 const CartBadge = styled(Badge)`
   & .${badgeClasses.badge} {

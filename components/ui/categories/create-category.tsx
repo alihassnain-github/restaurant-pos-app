@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import Paper from "@mui/material/Paper";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import TextField from "@mui/material/TextField";
-import InputLabel from "@mui/material/InputLabel";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
+import Paper from '@mui/material/Paper';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 export default function CreateCategoryForm() {
   return (
@@ -25,8 +25,8 @@ export default function CreateCategoryForm() {
             <FormControl fullWidth size="small">
               <InputLabel>Status</InputLabel>
               <Select label="Status">
-                <MenuItem value={"active"}>Active</MenuItem>
-                <MenuItem value={"inactive"}>Inactive</MenuItem>
+                <MenuItem value={'active'}>Active</MenuItem>
+                <MenuItem value={'inactive'}>Inactive</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -45,9 +45,9 @@ export default function CreateCategoryForm() {
           <Box
             component="div"
             sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              width: "100%",
+              display: 'flex',
+              justifyContent: 'flex-end',
+              width: '100%',
               mt: 1,
             }}
           >

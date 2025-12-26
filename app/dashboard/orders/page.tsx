@@ -1,10 +1,10 @@
-import Search from "@/components/search";
-import OrdersTable from "@/components/ui/orders/table";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import SelectStatus from "@/components/ui/orders/status";
-import DateFilter from "@/components/date-filter";
-import Grid from "@mui/material/Grid";
+import Search from '@/components/search';
+import OrdersTable from '@/components/ui/orders/table';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import SelectStatus from '@/components/ui/orders/status';
+import DateFilter from '@/components/date-filter';
+import Grid from '@mui/material/Grid';
 
 export default function Page() {
   return (

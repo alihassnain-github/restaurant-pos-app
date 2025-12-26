@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { dashboardStats } from "@/data/dashboard/stats";
+import { dashboardStats } from '@/data/dashboard/stats';
 import {
   Insights,
   MoneyOff,
@@ -8,12 +8,12 @@ import {
   TrendingUp,
   ArrowUpward,
   ArrowDownward,
-} from "@mui/icons-material";
-import MuiCard from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import { calculatePercentageChange } from "@/app/lib/utils";
+} from '@mui/icons-material';
+import MuiCard from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { calculatePercentageChange } from '@/app/lib/utils';
 
 const iconMap = {
   revenue: TrendingUp,
@@ -25,7 +25,7 @@ const iconMap = {
 interface CardProps {
   title: string;
   value: number | string;
-  type: "revenue" | "orders" | "expenses" | "profit";
+  type: 'revenue' | 'orders' | 'expenses' | 'profit';
   yesterdayValue: number;
 }
 
@@ -75,7 +75,7 @@ export default function CardWrapper() {
 export function Card({ title, type, value, yesterdayValue }: CardProps) {
   const Icon = iconMap[type];
   const currentValue =
-    typeof value === "number" ? value : parseFloat(value.toString());
+    typeof value === 'number' ? value : parseFloat(value.toString());
   const percentageChange = calculatePercentageChange(
     currentValue,
     yesterdayValue
@@ -88,8 +88,8 @@ export function Card({ title, type, value, yesterdayValue }: CardProps) {
       <CardContent sx={{ p: 3 }}>
         <Box
           sx={{
-            display: "flex",
-            alignItems: "center",
+            display: 'flex',
+            alignItems: 'center',
             gap: 1.5,
             mb: 2,
           }}
@@ -97,9 +97,9 @@ export function Card({ title, type, value, yesterdayValue }: CardProps) {
           <Box
             bgcolor="action.hover"
             sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
               width: 40,
               height: 40,
               borderRadius: 2,
@@ -111,7 +111,7 @@ export function Card({ title, type, value, yesterdayValue }: CardProps) {
             variant="inherit"
             sx={{
               fontWeight: 500,
-              fontSize: "0.875rem",
+              fontSize: '0.875rem',
             }}
           >
             {title}
@@ -119,9 +119,9 @@ export function Card({ title, type, value, yesterdayValue }: CardProps) {
         </Box>
         <Box
           sx={{
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "space-between",
+            display: 'flex',
+            alignItems: 'flex-end',
+            justifyContent: 'space-between',
             gap: 0.5,
           }}
         >
@@ -130,13 +130,13 @@ export function Card({ title, type, value, yesterdayValue }: CardProps) {
           </Typography>
           <Box
             sx={{
-              display: "flex",
-              alignItems: "center",
+              display: 'flex',
+              alignItems: 'center',
               gap: 0.5,
             }}
           >
             <ArrowIcon
-              color={isPositive ? "success" : "error"}
+              color={isPositive ? 'success' : 'error'}
               sx={{
                 fontSize: 16,
               }}
@@ -144,9 +144,9 @@ export function Card({ title, type, value, yesterdayValue }: CardProps) {
             <Typography
               variant="body2"
               fontSize={14}
-              color={isPositive ? "success" : "error"}
+              color={isPositive ? 'success' : 'error'}
             >
-              {isPositive ? "+" : ""}
+              {isPositive ? '+' : ''}
               {percentageChange.toFixed(2)}%
             </Typography>
           </Box>

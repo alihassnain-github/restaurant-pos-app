@@ -1,20 +1,20 @@
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import { CreateItem } from "@/components/ui/items/buttons";
-import ItemsTable from "@/components/ui/items/table";
-import Search from "@/components/search";
-import CategorySelect from "@/components/ui/items/category-status";
-import SelectStatus from "@/components/status";
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import { CreateItem } from '@/components/ui/items/buttons';
+import ItemsTable from '@/components/ui/items/table';
+import Search from '@/components/search';
+import CategorySelect from '@/components/ui/items/category-status';
+import SelectStatus from '@/components/status';
 
 export default function Page() {
   return (
     <>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "start",
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'start',
           mb: 2,
         }}
       >

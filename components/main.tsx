@@ -1,41 +1,41 @@
-"use client";
+'use client';
 
-import { ReactNode } from "react";
-import { styled } from "@mui/material";
-import { drawerWidth, useSidebarProps } from "@/context/sidebar-provider";
+import { ReactNode } from 'react';
+import { styled } from '@mui/material';
+import { drawerWidth, useSidebarProps } from '@/context/sidebar-provider';
 
-const Main = styled("main", {
-  shouldForwardProp: (prop) => prop !== "open",
+const Main = styled('main', {
+  shouldForwardProp: (prop) => prop !== 'open',
 })<{
   open?: boolean;
 }>(({ theme, open }) => ({
-  minHeight: "100vh",
+  minHeight: '100vh',
   flexGrow: 1,
   padding: theme.spacing(3),
-  overflowX: "hidden",
-  transition: theme.transitions.create("width", {
+  overflowX: 'hidden',
+  transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  width: "100%",
+  width: '100%',
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create("width", {
+    transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
   }),
-  [theme.breakpoints.down("lg")]: {
-    width: "100%",
+  [theme.breakpoints.down('lg')]: {
+    width: '100%',
   },
 }));
 
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
+const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
-  justifyContent: "flex-end",
+  justifyContent: 'flex-end',
 }));
 
 export default function MainWrapper({ children }: { children: ReactNode }) {

@@ -1,11 +1,11 @@
-import CardWrapper from "@/components/ui/dashboard/card";
-import ExpenseChart from "@/components/ui/dashboard/expense-chart";
-import OrdersChart from "@/components/ui/dashboard/orders-chart";
-import RecentOrders from "@/components/ui/dashboard/recent-orders";
-import RevenueChart from "@/components/ui/dashboard/revenue-chart";
-import TopSellingItems from "@/components/ui/dashboard/top-selling-items";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import CardWrapper from '@/components/ui/dashboard/card';
+import ExpenseChart from '@/components/ui/dashboard/expense-chart';
+import OrdersChart from '@/components/ui/dashboard/orders-chart';
+import RecentOrders from '@/components/ui/dashboard/recent-orders';
+import RevenueChart from '@/components/ui/dashboard/revenue-chart';
+import TopSellingItems from '@/components/ui/dashboard/top-selling-items';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 export default function Page() {
   return (
@@ -15,12 +15,12 @@ export default function Page() {
       </Typography>
       <Box
         sx={{
-          display: "grid",
+          display: 'grid',
           gap: 3,
           gridTemplateColumns: {
-            xs: "1fr",
-            sm: "repeat(2, 1fr)",
-            lg: "repeat(4, 1fr)",
+            xs: '1fr',
+            sm: 'repeat(2, 1fr)',
+            lg: 'repeat(4, 1fr)',
           },
           mb: 2,
         }}
@@ -30,11 +30,11 @@ export default function Page() {
       <RevenueChart />
       <Box
         sx={{
-          display: "grid",
+          display: 'grid',
           gap: 3,
           gridTemplateColumns: {
-            xs: "1fr",
-            lg: "repeat(2, 1fr)",
+            xs: '1fr',
+            lg: 'repeat(2, 1fr)',
           },
           mb: 2,
         }}
@@ -44,11 +44,11 @@ export default function Page() {
       </Box>
       <Box
         sx={{
-          display: "grid",
+          display: 'grid',
           gap: 3,
           gridTemplateColumns: {
-            xs: "1fr",
-            lg: "repeat(2, 1fr)",
+            xs: '1fr',
+            lg: 'repeat(2, 1fr)',
           },
           mb: 2,
         }}

@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import OutlinedInput from "@mui/material/OutlinedInput";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { useState } from "react";
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { useState } from 'react';
 
-const categories = ["Appetizers", "Main Course", "Desserts", "Beverages"];
+const categories = ['Appetizers', 'Main Course', 'Desserts', 'Beverages'];
 
 export default function CategorySelect() {
   const [category, setCategory] = useState<string[]>([]);
@@ -18,7 +18,7 @@ export default function CategorySelect() {
     } = event;
     setCategory(
       // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
+      typeof value === 'string' ? value.split(',') : value
     );
   };
 

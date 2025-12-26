@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { DayPicker, DateRange } from "react-day-picker";
-import TextField from "@mui/material/TextField";
-import Card from "@mui/material/Card";
-import Box from "@mui/material/Box";
-import "react-day-picker/style.css";
-import { useEffect, useRef, useState } from "react";
+import { DayPicker, DateRange } from 'react-day-picker';
+import TextField from '@mui/material/TextField';
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import 'react-day-picker/style.css';
+import { useEffect, useRef, useState } from 'react';
 
 interface DateFilterProps {
   placeholder: string;
@@ -29,7 +29,7 @@ export default function DateFilter({
         ? selectedRange.from.toDateString()
         : `${selectedRange.from.toDateString()} - ${selectedRange.to.toDateString()}`
       : selectedRange.from.toDateString()
-    : "";
+    : '';
 
   // Close on outside click
   useEffect(() => {
@@ -41,12 +41,12 @@ export default function DateFilter({
         setOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (
-    <Box component="div" ref={containerRef} sx={{ position: "relative" }}>
+    <Box component="div" ref={containerRef} sx={{ position: 'relative' }}>
       <TextField
         fullWidth
         slotProps={{
@@ -65,8 +65,8 @@ export default function DateFilter({
         <Card
           variant="elevation"
           sx={{
-            position: "absolute",
-            bgcolor: "background.paper",
+            position: 'absolute',
+            bgcolor: 'background.paper',
             zIndex: 3,
             boxShadow: 6,
             p: 2,

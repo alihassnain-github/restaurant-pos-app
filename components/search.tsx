@@ -1,5 +1,5 @@
-"use client";
-import TextField from "@mui/material/TextField";
+'use client';
+import TextField from '@mui/material/TextField';
 
 export default function Search({ placeholder }: { placeholder: string }) {
   return (

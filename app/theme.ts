@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { createTheme } from "@mui/material/styles";
-import { inter, lusitana } from "./fonts";
+import { createTheme } from '@mui/material/styles';
+import { inter, lusitana } from './fonts';
 
 const theme = createTheme({
   cssVariables: {
-    colorSchemeSelector: "data",
+    colorSchemeSelector: 'data',
   },
   colorSchemes: { light: true, dark: true },
   typography: {

@@ -1,6 +1,6 @@
-import { ordersOverTime } from "@/data/dashboard/chartData";
-import Card from "@mui/material/Card";
-import { BarChart } from "@mui/x-charts/BarChart";
+import { ordersOverTime } from '@/data/dashboard/chartData';
+import Card from '@mui/material/Card';
+import { BarChart } from '@mui/x-charts/BarChart';
 
 export default function OrdersChart() {
   const formattedDates = ordersOverTime.map((item) => {
@@ -15,15 +15,15 @@ export default function OrdersChart() {
       <BarChart
         xAxis={[
           {
-            scaleType: "band",
+            scaleType: 'band',
             data: formattedDates,
           },
         ]}
         series={[
           {
             data: orderValues,
-            label: "Orders",
-            color: "teal",
+            label: 'Orders',
+            color: 'teal',
           },
         ]}
         height={300}
