@@ -1,6 +1,10 @@
 import Chip from '@mui/material/Chip';
 import { ChipProps } from '@mui/material/Chip';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
+import WarningAmber from '@mui/icons-material/WarningAmber';
 import EventSeatIcon from '@mui/icons-material/EventSeat';
 import PaidIcon from '@mui/icons-material/Paid';
 import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
@@ -81,6 +85,36 @@ const STATUS_CONFIG = {
     label: 'Occupied',
     icon: EventSeatIcon,
     color: 'error',
+  },
+
+  /* Low stock status */
+  low: {
+    label: 'Low Stock',
+    icon: WarningAmber,
+    color: 'warning',
+  },
+  critical: {
+    label: 'Critical Stock',
+    icon: ErrorOutlineIcon,
+    color: 'error',
+  },
+
+  /* stock status */
+  in: {
+    label: 'Stock In',
+    icon: ArrowUpwardIcon,
+    color: 'success',
+  },
+  out: {
+    label: 'Stock Out',
+    icon: ArrowDownwardIcon,
+    color: 'error',
+  },
+
+  ok: {
+    label: 'Stock OK',
+    icon: CheckCircleOutlineIcon,
+    color: 'default',
   },
 } as const;
 

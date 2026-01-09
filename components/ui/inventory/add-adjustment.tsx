@@ -1,10 +1,10 @@
 'use client';
 
 import Paper from '@mui/material/Paper';
-import Card from '@mui/material/Card';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import Card from '@mui/material/Card';
 import Select from '@mui/material/Select';
 import CardContent from '@mui/material/CardContent';
 import TextField from '@mui/material/TextField';
@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
-export default function AddStockForm() {
+export default function AddAdjustmentForm() {
   return (
     <Card component={Paper} variant="outlined" sx={{ mt: 2, p: 1 }}>
       <CardContent>
@@ -31,6 +31,19 @@ export default function AddStockForm() {
           </Grid>
 
           <Grid size={{ xs: 12, sm: 6 }}>
+            <FormControl size="small" fullWidth>
+              <InputLabel>Reason</InputLabel>
+              <Select label="Reason">
+                <MenuItem value="wastage">Wastage</MenuItem>
+                <MenuItem value="spoilage">Spoilage</MenuItem>
+                <MenuItem value="theft">Theft</MenuItem>
+                <MenuItem value="staff-use">Staff Use</MenuItem>
+                <MenuItem value="other">Other</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+
+          <Grid size={{ xs: 12, sm: 6 }}>
             <DatePicker
               label="Date"
               slotProps={{
@@ -39,15 +52,6 @@ export default function AddStockForm() {
                   size: 'small',
                 },
               }}
-            />
-          </Grid>
-
-          <Grid size={{ xs: 12, sm: 6 }}>
-            <TextField
-              fullWidth
-              label="Supplier"
-              variant="outlined"
-              size="small"
             />
           </Grid>
 
@@ -70,24 +74,6 @@ export default function AddStockForm() {
           <Grid size={{ xs: 12, sm: 6 }}>
             <TextField
               fullWidth
-              size="small"
-              label="Cost"
-              variant="outlined"
-              type="number"
-              slotProps={{
-                htmlInput: {
-                  min: 1,
-                  step: 1,
-                },
-              }}
-            />
-          </Grid>
-
-          <Grid size={{ xs: 12, sm: 6 }}></Grid>
-
-          <Grid size={{ xs: 12, sm: 6 }}>
-            <TextField
-              fullWidth
               multiline
               rows={4}
               label="Notes"
@@ -105,7 +91,7 @@ export default function AddStockForm() {
               mt: 1,
             }}
           >
-            <Button variant="contained">Add Stock</Button>
+            <Button variant="contained">Add Adjustment</Button>
           </Box>
         </Grid>
       </CardContent>

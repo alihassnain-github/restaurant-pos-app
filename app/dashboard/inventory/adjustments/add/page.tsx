@@ -1,5 +1,5 @@
 import Breadcrumbs from '@/components/breadcrumbs';
-import Form from '@/components/ui/inventory/edit-item';
+import Form from '@/components/ui/inventory/add-adjustment';
 
 export default function Page() {
   return (
@@ -7,10 +7,14 @@ export default function Page() {
       <Breadcrumbs
         breadcrumbs={[
           { label: 'Inventory', href: '/dashboard/inventory', active: false },
-          { label: 'Items', href: '/dashboard/inventory/items', active: false },
           {
-            label: 'Edit Item',
-            href: '/dashboard/inventory/items/1/edit',
+            label: 'Adjustments',
+            href: '/dashboard/inventory/adjustments',
+            active: false,
+          },
+          {
+            label: 'Add Stock Adjustment',
+            href: '/dashboard/inventory/adjustments/add',
             active: true,
           },
         ]}

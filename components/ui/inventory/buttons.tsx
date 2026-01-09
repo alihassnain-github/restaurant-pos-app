@@ -8,9 +8,19 @@ import Link from 'next/link';
 
 export function AddStock() {
   return (
-    <Link href={'/dashboard/inventory/stock-in/create'}>
+    <Link href={'/dashboard/inventory/stock-in/add'}>
       <Button variant="contained" size="small">
         Add Stock
+      </Button>
+    </Link>
+  );
+}
+
+export function AddAdjustment() {
+  return (
+    <Link href={'/dashboard/inventory/adjustments/add'}>
+      <Button variant="contained" size="small">
+        Add Adjustment
       </Button>
     </Link>
   );

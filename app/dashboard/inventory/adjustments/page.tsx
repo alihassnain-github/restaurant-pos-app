@@ -2,9 +2,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import Search from '@/components/search';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import SelectStatus from '@/components/status';
-import { CreateItem } from '@/components/ui/inventory/buttons';
-import ItemsTable from '@/components/ui/inventory/items-table';
+import { AddAdjustment } from '@/components/ui/inventory/buttons';
+import DateFilter from '@/components/date-filter';
+import ReasonSelect from '@/components/ui/inventory/reason-select';
+import AdjustmentsTable from '@/components/ui/inventory/adjustment-table';
 
 export default function Page() {
   return (
@@ -21,13 +22,13 @@ export default function Page() {
           breadcrumbs={[
             { label: 'Inventory', href: '/dashboard/inventory', active: false },
             {
-              label: 'Items',
-              href: '/dashboard/inventory/items',
+              label: 'Adjustments',
+              href: '/dashboard/inventory/adjustments',
               active: true,
             },
           ]}
         />
-        <CreateItem />
+        <AddAdjustment />
       </Box>
       <Box sx={{ mb: 2 }}>
         <Grid container spacing={2}>
@@ -35,11 +36,14 @@ export default function Page() {
             <Search placeholder="Search by Name" />
           </Grid>
           <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-            <SelectStatus />
+            <ReasonSelect />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <DateFilter futureDate={false} placeholder="Filter by Date" />
           </Grid>
         </Grid>
       </Box>
-      <ItemsTable />
+      <AdjustmentsTable />
     </>
   );
 }

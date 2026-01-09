@@ -11,7 +11,10 @@ interface DeleteModalProps {
   handleClose: () => void;
 }
 
-export default function DeleteItemModal({ open, handleClose }: DeleteModalProps) {
+export default function DeleteItemModal({
+  open,
+  handleClose,
+}: DeleteModalProps) {
   return (
     <Modal open={open} onClose={handleClose}>
       <Box
@@ -32,8 +35,8 @@ export default function DeleteItemModal({ open, handleClose }: DeleteModalProps)
         </Typography>
 
         <Typography variant="body2" color="text.secondary" mb={3}>
-          Are you sure you want to delete item with name <strong>Chicken</strong>?
-          This action cannot be undone.
+          Are you sure you want to delete item with name{' '}
+          <strong>Chicken</strong>? This action cannot be undone.
         </Typography>
 
         <Stack direction="row" spacing={1} justifyContent="flex-end">
