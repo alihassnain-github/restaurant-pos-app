@@ -18,6 +18,7 @@
     "@mui/x-charts": "^8.22.0",
     "@mui/x-date-pickers": "^8.22.1",
     "dayjs": "^1.11.19",
+    "mui-tel-input": "^9.0.1",
     "next": "16.0.8",
     "react": "19.2.1",
     "react-day-picker": "^9.13.0",

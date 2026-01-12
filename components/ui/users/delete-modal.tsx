@@ -28,11 +28,11 @@ export default function DeleteModal({ open, handleClose }: DeleteModalProps) {
                 }}
             >
                 <Typography variant="h6" mb={1}>
-                    Delete Role
+                    Delete User
                 </Typography>
 
                 <Typography variant="body2" color="text.secondary" mb={3}>
-                    Are you sure you want to delete role with name <strong>General Manager</strong>?
+                    Are you sure you want to delete user with name <strong>Ali Hassnain</strong> & role <strong>General Manager</strong>?
                     This action cannot be undone.
                 </Typography>
 
