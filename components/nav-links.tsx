@@ -11,6 +11,7 @@ import {
   Assessment,
   Settings,
   MoneyOff,
+  CorporateFare
 } from '@mui/icons-material';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -26,8 +27,11 @@ const links = [
   // Table Management
   { name: 'Tables', href: '/dashboard/tables', icon: TableRestaurant },
 
-  // Billing
-  { name: 'Billing', href: '/dashboard/billing', icon: ReceiptLong },
+  // Suppliers
+  { name: 'Suppliers', href: '/dashboard/supplier', icon: CorporateFare },
+
+  // Invoices
+  { name: 'Invoices', href: '/dashboard/invoices', icon: ReceiptLong },
 
   // Menu & Items
   { name: 'Items', href: '/dashboard/items', icon: ShoppingCart },
