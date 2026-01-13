@@ -1,0 +1,44 @@
+'use client';
+
+import DriveFileRenameOutlineOutlinedIcon from '@mui/icons-material/DriveFileRenameOutlineOutlined';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
+import Link from 'next/link';
+
+export function AddExpense() {
+    return (
+        <Link href={'/dashboard/expenses/add'}>
+            <Button variant="contained" size="small">
+                Add Expense
+            </Button>
+        </Link>
+    );
+}
+
+export function EditExpense() {
+    return (
+        <Link href={'/dashboard/expenses/1/edit'}>
+            <IconButton size="medium" aria-label="edit" color="primary">
+                <DriveFileRenameOutlineOutlinedIcon fontSize="small" />
+            </IconButton>
+        </Link>
+    );
+}
+
+interface DeleteExpenseProps {
+    handleOpen: () => void;
+}
+
+export function DeleteExpense({ handleOpen }: DeleteExpenseProps) {
+    return (
+        <IconButton
+            size="medium"
+            onClick={handleOpen}
+            aria-label="delete"
+            color="error"
+        >
+            <DeleteIcon fontSize="small" />
+        </IconButton>
+    );
+}

@@ -3,7 +3,6 @@ import {
   Restaurant,
   ReceiptLong,
   TableRestaurant,
-  Kitchen,
   Print,
   Inventory,
   Category,
@@ -26,9 +25,6 @@ const links = [
 
   // Table Management
   { name: 'Tables', href: '/dashboard/tables', icon: TableRestaurant },
-
-  // Kitchen
-  { name: 'Kitchen Display', href: '/dashboard/kds', icon: Kitchen },
 
   // Billing
   { name: 'Billing', href: '/dashboard/billing', icon: ReceiptLong },
