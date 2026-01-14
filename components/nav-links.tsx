@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Dashboard,
   Restaurant,
@@ -17,6 +19,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const links = [
   { name: 'Dashboard', href: '/dashboard', icon: Dashboard },
@@ -59,6 +62,9 @@ const links = [
 ];
 
 export default function NavLinks() {
+
+  const pathname = usePathname();
+
   return (
     <>
       {links.map((link) => (
@@ -67,7 +73,7 @@ export default function NavLinks() {
           href={link.href}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
-          <ListItemButton>
+          <ListItemButton selected={pathname === link.href}>
             <ListItemIcon>
               <link.icon />
             </ListItemIcon>
