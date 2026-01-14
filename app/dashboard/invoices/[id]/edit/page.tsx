@@ -1,5 +1,5 @@
 import Breadcrumbs from '@/components/breadcrumbs';
-import Form from '@/components/ui/invoices/create-invoice';
+import Form from '@/components/ui/invoices/edit-invoice';
 
 export default function Page() {
     return (
@@ -8,8 +8,8 @@ export default function Page() {
                 breadcrumbs={[
                     { label: 'Invoices', href: '/dashboard/invoices', active: false },
                     {
-                        label: 'Create Invoice',
-                        href: '/dashboard/invoices/create',
+                        label: 'Edit Invoice',
+                        href: '/dashboard/invoices/1/edit',
                         active: true,
                     },
                 ]}

@@ -3,7 +3,9 @@ import Search from '@/components/search';
 import ExpenseChart from '@/components/ui/dashboard/expense-chart';
 import ExpenseOvertimeChart from '@/components/ui/dashboard/expenses-overtime';
 import { AddExpense } from '@/components/ui/expenses/button';
+import SelectCategory from '@/components/ui/expenses/category-select';
 import ExpenseTable from '@/components/ui/expenses/table';
+import CategorySelect from '@/components/ui/items/category-status';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -42,6 +44,9 @@ export default function Page() {
         <Grid container spacing={2}>
           <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Search placeholder="Search by Title" />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <SelectCategory />
           </Grid>
           <Grid size={{ xs: 12, sm: 12, md: 4 }}>
             <DateFilter futureDate={false} placeholder="Select Date" />

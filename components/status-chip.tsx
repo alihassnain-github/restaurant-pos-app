@@ -14,6 +14,7 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import { CurrencyExchange, MoneyOff } from '@mui/icons-material';
 
 /**
  * Central registry for all chip states
@@ -24,6 +25,11 @@ const STATUS_CONFIG = {
     label: 'Pending',
     icon: HourglassBottomIcon,
     color: 'default',
+  },
+  'in-progress': {
+    label: 'In Progress',
+    icon: CurrencyExchange,
+    color: 'info',
   },
   preparing: {
     label: 'Preparing',
@@ -39,6 +45,11 @@ const STATUS_CONFIG = {
     label: 'Paid',
     icon: PaidIcon,
     color: 'success',
+  },
+  unpaid: {
+    label: 'Unpaid',
+    icon: MoneyOff,
+    color: 'error',
   },
   cancelled: {
     label: 'Cancelled',
